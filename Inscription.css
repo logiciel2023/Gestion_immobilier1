@@ -1,0 +1,47 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    /* background-color: blue; */
+    color: slategray;
+}
+body{
+    height: 95vh;
+    /* background-color: lightcyan; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(./Image/cambg_1.jpg) no-repeat;
+    background-size: cover;
+}
+.container{
+    /* background-color: white; */
+    text-align: center;
+}
+h2{
+    font-size: 2em;
+    color:red;
+}
+.user{
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+input{
+    width: 200px;
+    height: 25px;
+    font-size: 15px;
+    text-align: center;
+    border-radius: 25px;
+    outline: none;
+    background-color: ghostwhite;
+}
+label{
+    font-size: 20px;
+    color: white;
+}
+.fie{
+    border-radius: 100px;
+    margin: 50px;
+    padding: 40px;
+}
