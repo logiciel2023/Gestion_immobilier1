@@ -1,21 +1,28 @@
 <?php
-include("login.php");
+$pdo = new pdo('mysql:host=localhost;dbname=gestion_immobilier', 'root', '');
 if(isset($_POST['valider'])){
-    $user = stripcslashes($_POST['user']);
-    $password = stripcslashes($_POST['password']);
+    if(!empty($_POST['user']) && !empty($_POST['password'])){
+        $user = $_POST['user'];
+        $password = $_POST['password'];
 
-    $sql = "select *from login where user_name = '$user' and password = '$password' ";
-    $resultat = mysqli_query($conn,$sql);
-    $ligne = mysqli_fetch_array($resultat,MASQLI_ASSOC);
-    $count = mysqli_num_rows($resultat);
-    if($count==1){
-        header("Location::Bienvenue.php");
-    }
-    else{
+        $recupuser = $pdo->prepare('SELECT * FROM user WHERE email = ? AND mdp = ?');
+        $recupuser->execute(array($user, $password));
+        if($recupuser->rowCount() > 0){
+            session_start();
+            $_SESSION['email'] = $user;
+            header('Location: accueil.php');
+            exit;
+        }else{
+            echo '<script>
+                window.location.href = "index.php";
+                alert("connexion echoue. nom utilisateur ou mot de passe invalide");
+            </script>';
+        }
+    }else{
         echo '<script>
-        windows.Location.href="login.php";
-        alert("connexion echoue. nom utilisateur ou mot de passe invalide")
-              <script>'
+            window.location.href = "index.php";
+            alert("veillez remplir tous les champs svp!");
+        </script>';
     }
 }
 ?>
