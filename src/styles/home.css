@@ -1,0 +1,194 @@
+.home-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1e3a5f 0%, #0f172a 100%);
+  position: relative;
+}
+
+.main {
+  width: 100%;
+}
+
+.navbar {
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px;
+  height: 70px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.logo h3 {
+  color: #2563eb;
+  font-size: 22px;
+  font-family: cursive;
+  font-weight: bolder;
+  cursor: pointer;
+}
+
+.menu ul {
+  display: flex;
+  list-style: none;
+  gap: 24px;
+}
+
+.menu ul li a {
+  text-decoration: none;
+  color: #2c0da9;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.menu ul li a:hover {
+  color: #ff7200;
+}
+
+.search-box {
+  position: relative;
+}
+
+.search-box a {
+  text-decoration: none;
+}
+
+.search-box .infobull {
+  transform: scale(0);
+  position: absolute;
+  right: 0;
+  top: 100%;
+  background-color: #2e3048;
+  color: #fff;
+  border-radius: 5px;
+  padding: 8px 12px;
+  white-space: nowrap;
+  font-size: 13px;
+  transition: transform 0.3s;
+  margin-top: 8px;
+}
+
+.search-box a:hover .infobull {
+  transform: scale(1);
+}
+
+.welcome-section {
+  text-align: center;
+  padding: 80px 24px 60px;
+  color: #fff;
+}
+
+.welcome-section h1 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.welcome-section p {
+  font-size: 16px;
+  color: #cbd5e1;
+  margin-bottom: 40px;
+}
+
+.action-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.action-card {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+  padding: 32px 24px;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  transition: transform 0.2s, background 0.2s;
+}
+
+.action-card:hover {
+  transform: translateY(-4px);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.action-card i {
+  font-size: 40px;
+  color: #60a5fa;
+  margin-bottom: 16px;
+  display: block;
+}
+
+.action-card h3 {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.action-card p {
+  font-size: 14px;
+  color: #94a3b8;
+}
+
+.admin-card i {
+  color: #fbbf24;
+}
+
+.contact-text {
+  position: absolute;
+  bottom: 60px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  color: #60a5fa;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.footer {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+
+.footer a i {
+  color: #60a5fa;
+  font-size: 22px;
+  transition: color 0.2s;
+}
+
+.footer a i:hover {
+  color: #ff7200;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    height: auto;
+    padding: 12px;
+    gap: 12px;
+  }
+
+  .menu ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+  }
+
+  .welcome-section {
+    padding: 40px 16px;
+  }
+
+  .welcome-section h1 {
+    font-size: 24px;
+  }
+
+  .action-cards {
+    grid-template-columns: 1fr;
+  }
+}
