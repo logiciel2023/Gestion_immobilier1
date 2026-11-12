@@ -23,6 +23,7 @@
                     <li><a href="#">REPRESENTANT</a></li>
                     <li><a href="Client.php">CLIENT</a></li>
                     <li><a href="#">CONTACT</a></li>
+                    <li><a href="admin.php">ADMIN</a></li>
                 </ul>
             </div>
             <div class="search-box">
